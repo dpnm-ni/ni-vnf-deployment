@@ -1,0 +1,335 @@
+io.h:16  [--per_core_cost] => [0.01]
+io.h:16  [--per_bit_transit_cost] => [3.626543209876543e-7]
+io.h:16  [--topology_file] => [testbed-8]
+io.h:16  [--middlebox_spec_file] => [middlebox-spec]
+io.h:16  [--traffic_request_file] => [logs/traf-testbed-8-00001]
+io.h:16  [--max_time] => [7200]
+io.h:16  [--algorithm] => [cplex]
+io.h:37 [Parsing middlebox-spec]
+io.h:55 Parsed 7 lines
+io.h:137 [Parsing testbed-8]
+io.h:141  node_count = 13, edge_count = 12
+io.h:160 nodes.size() = 13
+io.h:162 node_id : 0, num_cores : 32
+io.h:162 node_id : 1, num_cores : 32
+io.h:162 node_id : 2, num_cores : 24
+io.h:162 node_id : 3, num_cores : 24
+io.h:162 node_id : 4, num_cores : 32
+io.h:162 node_id : 5, num_cores : 0
+io.h:162 node_id : 6, num_cores : 8
+io.h:162 node_id : 7, num_cores : 8
+io.h:162 node_id : 8, num_cores : 8
+io.h:162 node_id : 9, num_cores : 0
+io.h:162 node_id : 10, num_cores : 0
+io.h:162 node_id : 11, num_cores : 0
+io.h:162 node_id : 12, num_cores : 0
+io.h:169  Read edge: 9 0 10000 1
+io.h:171  Adding edge, 9 --> node_id : 0, num_cores : 32
+io.h:173  Adding edge, 0 --> node_id : 9, num_cores : 0
+io.h:169  Read edge: 9 1 10000 1
+io.h:171  Adding edge, 9 --> node_id : 1, num_cores : 32
+io.h:173  Adding edge, 1 --> node_id : 9, num_cores : 0
+io.h:169  Read edge: 10 3 10000 1
+io.h:171  Adding edge, 10 --> node_id : 3, num_cores : 24
+io.h:173  Adding edge, 3 --> node_id : 10, num_cores : 0
+io.h:169  Read edge: 10 2 10000 1
+io.h:171  Adding edge, 10 --> node_id : 2, num_cores : 24
+io.h:173  Adding edge, 2 --> node_id : 10, num_cores : 0
+io.h:169  Read edge: 12 4 10000 12
+io.h:171  Adding edge, 12 --> node_id : 4, num_cores : 32
+io.h:173  Adding edge, 4 --> node_id : 12, num_cores : 0
+io.h:169  Read edge: 9 12 10000 5
+io.h:171  Adding edge, 9 --> node_id : 12, num_cores : 0
+io.h:173  Adding edge, 12 --> node_id : 9, num_cores : 0
+io.h:169  Read edge: 10 12 10000 5
+io.h:171  Adding edge, 10 --> node_id : 12, num_cores : 0
+io.h:173  Adding edge, 12 --> node_id : 10, num_cores : 0
+io.h:169  Read edge: 11 12 1000 1
+io.h:171  Adding edge, 11 --> node_id : 12, num_cores : 0
+io.h:173  Adding edge, 12 --> node_id : 11, num_cores : 0
+io.h:169  Read edge: 11 5 1 1
+io.h:171  Adding edge, 11 --> node_id : 5, num_cores : 0
+io.h:173  Adding edge, 5 --> node_id : 11, num_cores : 0
+io.h:169  Read edge: 11 6 1000 1
+io.h:171  Adding edge, 11 --> node_id : 6, num_cores : 8
+io.h:173  Adding edge, 6 --> node_id : 11, num_cores : 0
+io.h:169  Read edge: 11 7 1000 1
+io.h:171  Adding edge, 11 --> node_id : 7, num_cores : 8
+io.h:173  Adding edge, 7 --> node_id : 11, num_cores : 0
+io.h:169  Read edge: 11 8 1000 1
+io.h:171  Adding edge, 11 --> node_id : 8, num_cores : 8
+io.h:173  Adding edge, 8 --> node_id : 11, num_cores : 0
+io.h:37 [Parsing logs/traf-testbed-8-00001]
+io.h:55 Parsed 1 lines
+io.h:23 Finding middlebox: nat2
+io.h:25 i = 0, name = firewall1
+io.h:25 i = 1, name = firewall3
+io.h:25 i = 2, name = ids1
+io.h:25 i = 3, name = ids2
+io.h:25 i = 4, name = nat1
+io.h:25 i = 5, name = nat2
+io.h:27 Middlebox nat2 found at 5
+io.h:23 Finding middlebox: ids2
+io.h:25 i = 0, name = firewall1
+io.h:25 i = 1, name = firewall3
+io.h:25 i = 2, name = ids1
+io.h:25 i = 3, name = ids2
+io.h:27 Middlebox ids2 found at 3
+middleman.cc:114 CPLEX arrival time : 0
+middleman.cc:115 CPLEX duration time : 432000
+middleman.cc:129 CPLEX input current traffic size : 1
+cplex5-pz.h:166 Modeling Physical Network...
+cplex5-pz.h:324 Done.
+cplex5-pz.h:330 Modeling the VNFs...
+cplex5-pz.h:598 Done.
+cplex5-pz.h:604 Modeling Traffic...
+cplex5-pz.h:1042 Done.
+cplex5-pz.h:1143 Invoking solver...
+CPXPARAM_Preprocessing_Dual                      1
+CPXPARAM_Threads                                 1
+CPXPARAM_Emphasis_Memory                         1
+CPXPARAM_DetTimeLimit                            160000
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Tried aggregator 3 times.
+MIP Presolve eliminated 2038 rows and 2113 columns.
+MIP Presolve modified 188 coefficients.
+Aggregator did 229 substitutions.
+Reduced MIP has 74 rows, 80 columns, and 273 nonzeros.
+Reduced MIP has 71 binaries, 3 generals, 0 SOSs, and 3 indicators.
+Presolve time = 0.01 sec. (4.11 ticks)
+Found incumbent of value 0.000000 after 0.01 sec. (4.75 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.01 sec. (4.84 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.01 sec. (4.84 ticks)
+cplex5-pz.h:1203 Traffic 0 node 0 provisioned on middlebox 8
+cplex5-pz.h:1203 Traffic 0 node 1 provisioned on middlebox 70
+cplex5-pz.h:1203 Traffic 0 node 2 provisioned on middlebox 56
+cplex5-pz.h:1203 Traffic 0 node 3 provisioned on middlebox 15
+cplex5-pz.h:1231 Middlebox 8 (Ingress) is active on switch 8
+cplex5-pz.h:1231 Middlebox 15 (Egress) is active on switch 2
+cplex5-pz.h:1231 Middlebox 56 (ids2) is active on switch 7
+cplex5-pz.h:1235 [vnfloc] mbox ids2; node 8
+cplex5-pz.h:1231 Middlebox 70 (nat2) is active on switch 4
+cplex5-pz.h:1235 [vnfloc] mbox nat2; node 5
+cplex5-pz.h:1242 [vnfloc] nmboxes: 2
+cplex5-pz.h:1247 [routeinfo] start
+cplex5-pz.h:1257 Traffic 0 node 0 provisioned on switch 8 pseudo-switch 8
+cplex5-pz.h:1257 Traffic 0 node 1 provisioned on switch 4 pseudo-switch 4
+cplex5-pz.h:1263 [routeinfo] demand 1; mbox 1; node 5
+cplex5-pz.h:1257 Traffic 0 node 2 provisioned on switch 7 pseudo-switch 7
+cplex5-pz.h:1263 [routeinfo] demand 1; mbox 2; node 8
+cplex5-pz.h:1257 Traffic 0 node 3 provisioned on switch 2 pseudo-switch 2
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (0, 0)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (1, 1)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (2, 2)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (3, 3)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (4, 4)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (5, 5)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (6, 6)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (7, 7)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (8, 8)
+cplex5-pz.h:1297 Traffic 0 link (0, 1) mapped to phy. link (8, 11)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (9, 9)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (10, 10)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (11, 11)
+cplex5-pz.h:1297 Traffic 0 link (0, 1) mapped to phy. link (11, 12)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (12, 12)
+cplex5-pz.h:1297 Traffic 0 link (0, 1) mapped to phy. link (12, 4)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (0, 0)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (1, 1)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (2, 2)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (3, 3)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (4, 4)
+cplex5-pz.h:1297 Traffic 0 link (1, 2) mapped to phy. link (4, 12)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (5, 5)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (6, 6)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (7, 7)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (8, 8)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (9, 9)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (10, 10)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (11, 11)
+cplex5-pz.h:1297 Traffic 0 link (1, 2) mapped to phy. link (11, 7)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (12, 12)
+cplex5-pz.h:1297 Traffic 0 link (1, 2) mapped to phy. link (12, 11)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (0, 0)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (1, 1)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (2, 2)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (3, 3)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (4, 4)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (5, 5)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (6, 6)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (7, 7)
+cplex5-pz.h:1297 Traffic 0 link (2, 3) mapped to phy. link (7, 11)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (8, 8)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (9, 9)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (10, 10)
+cplex5-pz.h:1297 Traffic 0 link (2, 3) mapped to phy. link (10, 2)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (11, 11)
+cplex5-pz.h:1297 Traffic 0 link (2, 3) mapped to phy. link (11, 12)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (12, 12)
+cplex5-pz.h:1297 Traffic 0 link (2, 3) mapped to phy. link (12, 10)
+It is feasible!
+max_vnf : 4
+lower_bound : 1
+upper_bound : 4
+after_max_vnf : 3
+cplex5-pz.h:166 Modeling Physical Network...
+cplex5-pz.h:324 Done.
+cplex5-pz.h:330 Modeling the VNFs...
+cplex5-pz.h:598 Done.
+cplex5-pz.h:604 Modeling Traffic...
+cplex5-pz.h:1042 Done.
+cplex5-pz.h:1143 Invoking solver...
+CPXPARAM_Preprocessing_Dual                      1
+CPXPARAM_Threads                                 1
+CPXPARAM_Emphasis_Memory                         1
+CPXPARAM_DetTimeLimit                            160000
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Tried aggregator 3 times.
+MIP Presolve eliminated 2041 rows and 2113 columns.
+MIP Presolve modified 182 coefficients.
+Aggregator did 229 substitutions.
+Reduced MIP has 71 rows, 80 columns, and 267 nonzeros.
+Reduced MIP has 71 binaries, 3 generals, 0 SOSs, and 3 indicators.
+Presolve time = 0.01 sec. (4.11 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.01 sec. (4.98 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.01 sec. (4.98 ticks)
+It does not feasible!
+max_vnf : 3
+lower_bound : 3
+upper_bound : 4
+after_max_vnf : 4
+cplex5-pz.h:166 Modeling Physical Network...
+cplex5-pz.h:324 Done.
+cplex5-pz.h:330 Modeling the VNFs...
+cplex5-pz.h:598 Done.
+cplex5-pz.h:604 Modeling Traffic...
+cplex5-pz.h:1042 Done.
+cplex5-pz.h:1143 Invoking solver...
+CPXPARAM_Preprocessing_Dual                      1
+CPXPARAM_Threads                                 1
+CPXPARAM_Emphasis_Memory                         1
+CPXPARAM_DetTimeLimit                            160000
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+Tried aggregator 3 times.
+MIP Presolve eliminated 2038 rows and 2113 columns.
+MIP Presolve modified 188 coefficients.
+Aggregator did 229 substitutions.
+Reduced MIP has 74 rows, 80 columns, and 273 nonzeros.
+Reduced MIP has 71 binaries, 3 generals, 0 SOSs, and 3 indicators.
+Presolve time = 0.01 sec. (4.11 ticks)
+Found incumbent of value 0.000000 after 0.01 sec. (4.75 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.01 sec. (4.84 ticks)
+Sequential b&c:
+  Real time             =    0.00 sec. (0.00 ticks)
+                          ------------
+Total (root+branch&cut) =    0.01 sec. (4.84 ticks)
+cplex5-pz.h:1203 Traffic 0 node 0 provisioned on middlebox 8
+cplex5-pz.h:1203 Traffic 0 node 1 provisioned on middlebox 70
+cplex5-pz.h:1203 Traffic 0 node 2 provisioned on middlebox 56
+cplex5-pz.h:1203 Traffic 0 node 3 provisioned on middlebox 15
+cplex5-pz.h:1231 Middlebox 8 (Ingress) is active on switch 8
+cplex5-pz.h:1231 Middlebox 15 (Egress) is active on switch 2
+cplex5-pz.h:1231 Middlebox 56 (ids2) is active on switch 7
+cplex5-pz.h:1235 [vnfloc] mbox ids2; node 8
+cplex5-pz.h:1231 Middlebox 70 (nat2) is active on switch 4
+cplex5-pz.h:1235 [vnfloc] mbox nat2; node 5
+cplex5-pz.h:1242 [vnfloc] nmboxes: 2
+cplex5-pz.h:1247 [routeinfo] start
+cplex5-pz.h:1257 Traffic 0 node 0 provisioned on switch 8 pseudo-switch 8
+cplex5-pz.h:1257 Traffic 0 node 1 provisioned on switch 4 pseudo-switch 4
+cplex5-pz.h:1263 [routeinfo] demand 1; mbox 1; node 5
+cplex5-pz.h:1257 Traffic 0 node 2 provisioned on switch 7 pseudo-switch 7
+cplex5-pz.h:1263 [routeinfo] demand 1; mbox 2; node 8
+cplex5-pz.h:1257 Traffic 0 node 3 provisioned on switch 2 pseudo-switch 2
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (0, 0)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (1, 1)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (2, 2)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (3, 3)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (4, 4)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (5, 5)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (6, 6)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (7, 7)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (8, 8)
+cplex5-pz.h:1297 Traffic 0 link (0, 1) mapped to phy. link (8, 11)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (9, 9)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (10, 10)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (11, 11)
+cplex5-pz.h:1297 Traffic 0 link (0, 1) mapped to phy. link (11, 12)
+cplex5-pz.h:1285 Traffic 0 link (0, 1) mapped to phy. link (12, 12)
+cplex5-pz.h:1297 Traffic 0 link (0, 1) mapped to phy. link (12, 4)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (0, 0)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (1, 1)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (2, 2)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (3, 3)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (4, 4)
+cplex5-pz.h:1297 Traffic 0 link (1, 2) mapped to phy. link (4, 12)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (5, 5)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (6, 6)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (7, 7)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (8, 8)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (9, 9)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (10, 10)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (11, 11)
+cplex5-pz.h:1297 Traffic 0 link (1, 2) mapped to phy. link (11, 7)
+cplex5-pz.h:1285 Traffic 0 link (1, 2) mapped to phy. link (12, 12)
+cplex5-pz.h:1297 Traffic 0 link (1, 2) mapped to phy. link (12, 11)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (0, 0)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (1, 1)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (2, 2)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (3, 3)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (4, 4)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (5, 5)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (6, 6)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (7, 7)
+cplex5-pz.h:1297 Traffic 0 link (2, 3) mapped to phy. link (7, 11)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (8, 8)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (9, 9)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (10, 10)
+cplex5-pz.h:1297 Traffic 0 link (2, 3) mapped to phy. link (10, 2)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (11, 11)
+cplex5-pz.h:1297 Traffic 0 link (2, 3) mapped to phy. link (11, 12)
+cplex5-pz.h:1285 Traffic 0 link (2, 3) mapped to phy. link (12, 12)
+cplex5-pz.h:1297 Traffic 0 link (2, 3) mapped to phy. link (12, 10)
+It is feasible!
+max_vnf : 4
+lower_bound : 4
+upper_bound : 4
+after_max_vnf : 4
+TrafficTimeIns 0 TimeLimit 160000 #VNF 4 Runtime 0.66162971
+middleman.cc:135 processed traffic: 1
+middleman.cc:178 Computing path for traffic 0
+middleman.cc:180 (8, 11)
+middleman.cc:180 (11, 12)
+middleman.cc:180 (12, 4)
+middleman.cc:180 (4, 12)
+middleman.cc:180 (11, 7)
+middleman.cc:180 (12, 11)
+middleman.cc:180 (7, 11)
+middleman.cc:180 (10, 2)
+middleman.cc:180 (11, 12)
+middleman.cc:180 (12, 10)
+middleman.cc:182 input sent
+util.h:924 (8, 11)
+util.h:924 (11, 12)
+util.h:924 (12, 4)
+util.h:924 (4, 12)
+util.h:924 (11, 7)
+util.h:924 (12, 11)
+util.h:924 (7, 11)
+util.h:924 (10, 2)
+util.h:924 (11, 12)
+util.h:924 (12, 10)
+util.h:934 node = 2, indeg = 1, outdeg = 0
+util.h:934 node = 8, indeg = 0, outdeg = 1

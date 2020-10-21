@@ -1,0 +1,62 @@
+io.h:16  [--per_core_cost] => [0.01]
+io.h:16  [--per_bit_transit_cost] => [3.626543209876543e-7]
+io.h:16  [--topology_file] => [testbed-8]
+io.h:16  [--middlebox_spec_file] => [middlebox-spec]
+io.h:16  [--traffic_request_file] => [logs/traf-testbed-8-00000]
+io.h:16  [--max_time] => [7200]
+io.h:16  [--algorithm] => [cplex]
+io.h:37 [Parsing middlebox-spec]
+io.h:55 Parsed 7 lines
+io.h:137 [Parsing testbed-8]
+io.h:141  node_count = 13, edge_count = 12
+io.h:160 nodes.size() = 13
+io.h:162 node_id : 0, num_cores : 32
+io.h:162 node_id : 1, num_cores : 32
+io.h:162 node_id : 2, num_cores : 24
+io.h:162 node_id : 3, num_cores : 24
+io.h:162 node_id : 4, num_cores : 32
+io.h:162 node_id : 5, num_cores : 8
+io.h:162 node_id : 6, num_cores : 8
+io.h:162 node_id : 7, num_cores : 8
+io.h:162 node_id : 8, num_cores : 8
+io.h:162 node_id : 9, num_cores : 0
+io.h:162 node_id : 10, num_cores : 0
+io.h:162 node_id : 11, num_cores : 0
+io.h:162 node_id : 12, num_cores : 0
+io.h:169  Read edge: 9 0 10000 1
+io.h:171  Adding edge, 9 --> node_id : 0, num_cores : 32
+io.h:173  Adding edge, 0 --> node_id : 9, num_cores : 0
+io.h:169  Read edge: 9 1 10000 1
+io.h:171  Adding edge, 9 --> node_id : 1, num_cores : 32
+io.h:173  Adding edge, 1 --> node_id : 9, num_cores : 0
+io.h:169  Read edge: 10 3 10000 1
+io.h:171  Adding edge, 10 --> node_id : 3, num_cores : 24
+io.h:173  Adding edge, 3 --> node_id : 10, num_cores : 0
+io.h:169  Read edge: 10 2 10000 1
+io.h:171  Adding edge, 10 --> node_id : 2, num_cores : 24
+io.h:173  Adding edge, 2 --> node_id : 10, num_cores : 0
+io.h:169  Read edge: 12 4 10000 12
+io.h:171  Adding edge, 12 --> node_id : 4, num_cores : 32
+io.h:173  Adding edge, 4 --> node_id : 12, num_cores : 0
+io.h:169  Read edge: 9 12 10000 5
+io.h:171  Adding edge, 9 --> node_id : 12, num_cores : 0
+io.h:173  Adding edge, 12 --> node_id : 9, num_cores : 0
+io.h:169  Read edge: 10 12 10000 5
+io.h:171  Adding edge, 10 --> node_id : 12, num_cores : 0
+io.h:173  Adding edge, 12 --> node_id : 10, num_cores : 0
+io.h:169  Read edge: 11 12 1000 1
+io.h:171  Adding edge, 11 --> node_id : 12, num_cores : 0
+io.h:173  Adding edge, 12 --> node_id : 11, num_cores : 0
+io.h:169  Read edge: 11 5 1000 1
+io.h:171  Adding edge, 11 --> node_id : 5, num_cores : 8
+io.h:173  Adding edge, 5 --> node_id : 11, num_cores : 0
+io.h:169  Read edge: 11 6 1000 1
+io.h:171  Adding edge, 11 --> node_id : 6, num_cores : 8
+io.h:173  Adding edge, 6 --> node_id : 11, num_cores : 0
+io.h:169  Read edge: 11 7 1000 1
+io.h:171  Adding edge, 11 --> node_id : 7, num_cores : 8
+io.h:173  Adding edge, 7 --> node_id : 11, num_cores : 0
+io.h:169  Read edge: 11 8 1000 1
+io.h:171  Adding edge, 11 --> node_id : 8, num_cores : 8
+io.h:173  Adding edge, 8 --> node_id : 11, num_cores : 0
+io.h:37 [Parsing logs/traf-testbed-8-00000]

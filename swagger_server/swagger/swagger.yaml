@@ -1,0 +1,161 @@
+---
+swagger: "2.0"
+info:
+  description: "NI VNF submodule service (path selection) for the NI project."
+  version: "1.0.0"
+  title: "NI VNF Deployment Module Service"
+#host: "virtserver.swaggerhub.com"
+#basePath: "/sh.park11/ni-vnf-sub-module/1.0.0"
+tags:
+- name: "ni_vnf_deployment_module"
+  description: "Perform management decisions using ML algorithms."
+schemes:
+- "https"
+- "http"
+paths:
+  /vnf_deployment/machine_learning:
+    post:
+      tags:
+      - "ai_module"
+      summary: "vnf deployment using machine learning"
+      description: ""
+      operationId: "ml_vnf_deployment"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "(TO BE) SFC type definition  should be inserted"
+        required: true
+        schema:
+          $ref: "#/definitions/targetInfo"
+      responses:
+        "200":
+          description: "Success."
+          schema:
+            type: "array"
+            items:
+              type: "integer"
+        "400":
+          description: "Invalid parameters supplied."
+      x-swagger-router-controller: "swagger_server.controllers.ai_module_controller"
+  /vnf_deployment/ILP:
+    post:
+      tags:
+        - "ai_module"
+      summary: "vnf deployment using ILP"
+      description: ""
+      operationId: "ilp_vnf_deployment"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "(TO BE) SFC type definition  should be inserted"
+          required: true
+          schema:
+            $ref: "#/definitions/targetInfo"
+      responses:
+        "200":
+          description: "Success."
+          schema:
+            type: "array"
+            items:
+              type: "integer"
+        "400":
+          description: "Invalid parameters supplied."
+      x-swagger-router-controller: "swagger_server.controllers.ai_module_controller"
+  /get_topology:
+    get:
+      tags:
+        - "ai_module"
+      summary: "Return a topology as adjacency matrix"
+      operationId: "get_topology"
+      produces:
+        - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+      x-swagger-router-controller: "swagger_server.controllers.ai_module_controller"
+  /get_sfcr_list:
+    get:
+      tags:
+        - "ai_module"
+      summary: "Return the sfc requests list"
+      operationId: "get_sfcr_list"
+      produces:
+        - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+      x-swagger-router-controller: "swagger_server.controllers.ai_module_controller"
+  /get_current_vnf_deployment/{prefix}:
+    get:
+      tags:
+        - "ai_module"
+      summary: "Return the current vnf deployment as matrix"
+      operationId: "get_current_vnf_deployment"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "prefix"
+          in: "path"
+          description: "vnf instance name prefix"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "OK"
+      x-swagger-router-controller: "swagger_server.controllers.ai_module_controller"
+  /get_resource_usage/{monitoring_time}:
+    get:
+      tags:
+        - "ai_module"
+      summary: "Return the resource usage as two arrays"
+      operationId: "get_resource_usage"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "monitoring_time"
+          in: "path"
+          description: "monitoring time in seconds"
+          required: true
+          type: "integer"
+      responses:
+        "200":
+          description: "OK"
+      x-swagger-router-controller: "swagger_server.controllers.ai_module_controller" 
+  /get_scenario:
+    get:
+      tags:
+        - "ai_module"
+      summary: "Generate Scenario"
+      operationId: "get_scenario"
+      produces:
+        - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+      x-swagger-router-controller: "swagger_server.controllers.ai_module_controller"
+definitions:
+  targetInfo:
+    type: "object"
+    properties:
+      vnf_inst_prefix:
+        type: "string"
+      sfcr_prefix:
+        type: "string"
+      sfc_prefix:
+        type: "string"
+      mon_win_sec:
+        type: "integer"
+externalDocs:
+  description: "Find out more about DPNM NI."
+  url: "http://dpnm.postech.ac.kr/"

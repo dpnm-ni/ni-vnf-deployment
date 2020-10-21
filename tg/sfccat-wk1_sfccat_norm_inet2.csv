@@ -1,0 +1,4 @@
+sfc,p,sfcid
+nat1|firewall1|ids1,0.2,1
+nat2|ids2,0.3,2
+nat3|firewall3|,0.5,3
