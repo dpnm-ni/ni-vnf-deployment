@@ -1,0 +1,90 @@
+---
+swagger: "2.0"
+info:
+  description: "NI VNF Deployment module for NI project."
+  version: "1.0.0"
+  title: "NI VNF Deployment"
+#host: "virtserver.swaggerhub.com"
+#basePath: "/sh.park11/ni-vnf-sub-module/1.0.0"
+tags:
+- name: "ni_vnf_deployment_module"
+  description: "Perform management decisions using ML algorithms."
+schemes:
+- "https"
+- "http"
+paths:
+  /evaluate_deployment:
+    get:
+      tags:
+      - "Deployment APIs"
+      summary: "evaluate_deployment"
+      operationId: "evaluate_deployment"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "Success."
+          schema:
+            type: "string"
+      x-swagger-router-controller: "server.controllers.default_controller"
+  /auto_deployment:
+    post:
+      tags:
+      - "Deployment APIs"
+      summary: "auto_deployment"
+      operationId: "auto_deployment"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "Success."
+          schema:
+            type: "string"
+      x-swagger-router-controller: "server.controllers.default_controller"
+  /shutdown_deployment:
+    post:
+      tags:
+      - "Deployment APIs"
+      summary: "shutdown_deployment"
+      operationId: "shutdown_deployment"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "Success."
+          schema:
+            type: "string"
+      x-swagger-router-controller: "server.controllers.default_controller"
+  /training_ml:
+    get:
+      tags:
+      - "Deployment APIs"
+      summary: "training_ml"
+      operationId: "training_ml"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "Success."
+          schema:
+            type: "string"
+      x-swagger-router-controller: "server.controllers.default_controller"
+definitions:
+  targetInfo:
+    type: "object"
+    properties:
+      vnf_inst_prefix:
+        type: "string"
+      sfcr_prefix:
+        type: "string"
+      sfc_prefix:
+        type: "string"
+      mon_win_sec:
+        type: "integer"
+externalDocs:
+  description: "Find out more about DPNM NI."
+  url: "http://dpnm.postech.ac.kr/"
